@@ -17,8 +17,8 @@ class panelim extends JPanel{
     
     }
 }
-public class grafikornegi2 extends JFrame{
-    public grafikornegi2(){
+public class grafikornegi3 extends JFrame{
+    public grafikornegi3(){
         add(new panelim());
     }
     public static void main(String[] args) {
