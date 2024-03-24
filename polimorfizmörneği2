@@ -1,0 +1,32 @@
+
+
+package algoritma2;
+//POLİMORFİZMİN BİRİNCİ ŞEKLİ
+class ev{
+    public void yasanir(){
+        System.out.println("ev icinde yasanir");
+    }
+}
+class apartman extends ev{
+    public void kat(){
+        System.out.println("apartman dairesi katlardadir");
+    }
+}
+class site extends apartman{
+    public void ortam(){
+        System.out.println("site ortami guzeldir");
+    }
+}
+public class polimorfizmornek2 {
+    public static void main(String[] args) {
+       ev akdivansitesi=new apartman();
+       akdivansitesi.yasanir(); 
+       apartman saglikapartmani=new site();//!!!!
+       saglikapartmani.yasanir();
+       saglikapartmani.kat();
+       site van=new site();
+       van.ortam(); van.yasanir(); van.kat();
+       ev x=new site();
+       x.yasanir(); 
+    }
+}
