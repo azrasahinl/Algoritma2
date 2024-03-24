@@ -1,0 +1,42 @@
+
+package algoritma2;
+///İki sayının toplamı
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;//hepsini ekliyor
+public class grafikinterfaceornek2 extends JFrame implements ActionListener{//SOYUT
+    JTextField metin1,metin2;
+    JButton btn1;
+    JLabel lbl1;
+    JPanel panel;
+public grafikinterfaceornek2(){
+    setSize(500,200);
+    metin1=new JTextField("Birinci sayı",10);
+    metin2=new JTextField("İkinci sayı",10);
+    lbl1=new JLabel("Sonuc:");
+    btn1=new JButton("TIKLA");
+    
+    panel=new JPanel();
+    this.setLayout(new FlowLayout(FlowLayout.LEFT,10,20));
+    panel.add(metin1);
+    panel.add(metin2);
+    panel.add(lbl1);
+    panel.add(btn1);
+    add(panel);
+    btn1.addActionListener(this);//butona basınca çalışmasını sağlıyor
+}
+    public static void main(String[] args) {
+        grafikinterfaceornek2 o2=new grafikinterfaceornek2();
+        o2.setVisible(true);
+        //o1.setSize(200,200);
+        o2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    }
+    public void actionPerformed(ActionEvent e){//SOMUTLAŞTI
+   int sayi1=Integer.parseInt(metin1.getText());//gettext metindeki bilgiyi almak için
+   int sayi2=Integer.parseInt(metin2.getText());
+   int toplam=sayi1+sayi2;
+   lbl1.setText("Toplam:"+toplam);
+    }
+}
