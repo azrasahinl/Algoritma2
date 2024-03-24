@@ -1,0 +1,34 @@
+
+package algoritma2;
+//Tıklaya basınca selam yazıyor
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;//hepsini ekliyor
+
+public class grafikinterfaceornek1 extends JFrame implements ActionListener {
+    JTextField metin1;
+    JButton btn1;
+    JPanel panel;
+    public grafikinterfaceornek1(){
+     setSize(500,200);
+     metin1=new JTextField("Buraya isim yazınız.",30);//kaç karakter olacağı
+     btn1=new JButton("TIKLA");
+     panel=new JPanel(); 
+     this.setLayout(new FlowLayout(FlowLayout.LEFT,10,20));
+     panel.add(metin1);
+     panel.add(btn1);
+     add(panel);
+     btn1.addActionListener(this);
+    }  
+    public static void main(String[] args) {
+        grafikinterfaceornek1 o1=new grafikinterfaceornek1();
+        o1.setVisible(true);
+        //o1.setSize(200,200);
+        o1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    }
+public void actionPerformed(ActionEvent e){
+    metin1.setText("SELAM!");
+}
+}
