@@ -1,0 +1,20 @@
+
+package algoritma2;
+public class Exception_2 {
+    public static void main(String[] args) {
+  //Sıfıra bölme hatası
+  //değer sıfır olduğu zmaan ortaya çıkar
+  //(mesela payda 0 olduğunda)
+  //(x1-x2)/(y1-y2) denklem olsun
+  //(y1=y2) olursa ve od çalılştırılırsa exception olur
+  try{
+        System.out.println(3/0);
+    }
+  catch(Exception e){
+      System.out.println(e.getMessage());
+  }
+  finally{
+      System.out.println("EXCEPTİON OLUSTU");
+  }
+}
+}
