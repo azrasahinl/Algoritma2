@@ -1,0 +1,21 @@
+
+package algoritma2;
+class bitki{
+ public bitki(){//constructor çünkü class ile ismi aynı
+     System.out.println("bitki constructorı calisir");
+     suister();//çünkü private sadece bu classta çalışır
+ }
+     private void suister(){//private method
+         System.out.println("bitki su ister");
+}   
+}
+public class kalıtımkompozisyon3 {//ana class
+    public bitki papatya=new bitki();
+   //constructorlu classs 
+    public static void main(String[] args) {
+        kalıtımkompozisyon3 akasya=new kalıtımkompozisyon3(); 
+    }
+ 
+}
+//bir önceki örnek gibi akasya.papatya.bitki demedik
+//çünkü constructor yapısı bize böyle bir kolayllık sağladı
