@@ -1,0 +1,21 @@
+
+package algoritma2;
+class SINAV{
+ public void vize(){
+     System.out.println("Vize siNavi onemlidir");    
+ }   
+}
+public class kalıtımkompozisyon2 {//ANA CLASS
+    public SINAV mayisayi=new SINAV();//KOMPOZİSYON
+    //public yazmazsak sorun olmaz ,private yazarsak sadece o classa
+   //özel olduğunu gösterir 
+    public static void main(String[] args) {
+     kalıtımkompozisyon2 x=new kalıtımkompozisyon2();
+     x.mayisayi.vize();//vize metoduna erişim yapılabilir
+    }
+    
+}//mesela ben 
+//private void FİNAL(){
+//sout("final sinavindan en az 50 alinmalidir"); diye bir metod oluştursaydım
+//x.mayis.FİNAL(); dediğimde uyarı verirdi çünkü final orda kullanılamıyor
+
