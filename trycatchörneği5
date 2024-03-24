@@ -1,0 +1,18 @@
+
+package algoritma2;
+public class trycatchornek4 {
+    public static void main(String[] args) {
+        try{
+            int a[]=new int[5];
+            a[4]=9;
+            System.out.println(a[8]);
+        }
+        catch(Exception e){
+                System.out.println("Dizi boyutu asildi");
+                } 
+                }        
+            }
+        
+    
+   
+
