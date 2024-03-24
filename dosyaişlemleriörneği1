@@ -1,0 +1,39 @@
+
+//öyle bir metod yazınızki klavyeden girilen rakamları 
+//rakam.dat dosyasına diğerlerini stringler de dahil diger.dat dosyasına yazan
+//metodu oluşturunnuz.
+//toplam 10 adet giriş yapılacaktır
+package algoritma2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+
+public class sınavhazırlıkornek2 {
+   public static void yazdosya() throws FileNotFoundException{
+       File fx1=new File("RAKAM.DAT");
+       File fx2=new File("DİGER.DAT");
+       PrintWriter pr1=new PrintWriter(fx1);
+       PrintWriter pr2=new PrintWriter(fx2);
+      Scanner k=new Scanner(System.in);
+       for (int i = 0; i < 10; i++) {
+         //char c=k.next().charAt(0);
+         //if(c>='0' && c<='9')
+         //pr1.print(c);
+         //else 
+        // pr2.print(c);
+        String s=k.next();
+        if(s.length()==1 && (s.charAt(0)>='0' && s.charAt(0)<='9'))
+       pr1.print(s);
+        else
+        pr2.print(s);
+        }
+       pr1.close();
+       pr2.close();
+   }  
+    public static void main(String[] args) throws FileNotFoundException {
+      yazdosya();  
+    }
+}
