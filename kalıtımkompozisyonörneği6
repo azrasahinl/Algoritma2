@@ -1,0 +1,24 @@
+
+package algoritma2;
+class kemik{
+  public void kirilir(){
+      System.out.println("kemik kirilabilir");
+  }  
+}
+class deri extends kemik{//kalıtım
+    public deri(){
+        System.out.println("constructor deri");
+    }
+  public void kaplar(){
+      System.out.println("kemik deri ile kaplidir");
+  }  
+}
+public class kalıtımkompozisyon6 {//ana class
+    public deri x=new deri();//kompozisyon
+    public static void main(String[] args) {
+       kalıtımkompozisyon6 ali=new kalıtımkompozisyon6(); 
+       ali.x.kirilir();//erisime dikkat
+       //hem kompozisyon hem kalıtım var
+       ali.x.kaplar();
+    }
+}
