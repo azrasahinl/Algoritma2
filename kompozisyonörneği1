@@ -1,0 +1,22 @@
+
+package algoritma2;
+class Motor{
+    public void calisir(){
+        System.out.println("motor calisir");
+    }
+  }
+class Araba{
+    public Motor dizel=new Motor();//KOMPOZİSYON
+    public void yurur(){
+        dizel.calisir();//motor sınıfının elemanı
+        System.out.println("Araba yurur");
+    }
+}
+public class kalıtımkompozisyon1 {//ANA CLASS
+    public static void main(String[] args) {
+        Araba sahin=new Araba();
+        sahin.yurur();
+// sahin.dizel.calisir(); // deseydikte motor çalisir yazardi
+}
+   
+}
