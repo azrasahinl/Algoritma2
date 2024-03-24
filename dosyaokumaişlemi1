@@ -1,0 +1,17 @@
+
+package algoritma2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class dosyaokumaislemi {
+    public static void main(String[] args) throws FileNotFoundException{ 
+ //DOSYA OKUMA İÇİN 
+ File fl=new File("sınıf.txt");//1.adım file nesneesi tanımlama
+ Scanner fd=new Scanner(fl);//2.adım scanner nesnesi oluşturma
+ String s=fd.nextLine();
+        System.out.println(s);//3.adım işlem adımları
+ fd.close();//4.adım dosyayı kapatma
+}
+}
