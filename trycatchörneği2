@@ -1,0 +1,30 @@
+
+package algoritma2;
+
+import java.util.Scanner;
+
+public class trycatchornek {
+    public static void main(String[] args) {
+        int c[]={1,2,3,4,5}; 
+        Scanner k=new Scanner(System.in);
+        try{
+            System.out.println(c[-1]);
+            try{
+              int v=k.nextInt();
+              int t=k.nextInt();
+                System.out.println(v+t);
+            }
+            catch(Exception fff){
+                System.out.println(fff);
+            }
+        }
+       catch(Exception e){
+     System.out.println(e);
+     System.out.println(e.getMessage());
+ }
+        finally{//finally de her halikarda çalışacak kod kısmı yazılıyor
+            
+        }
+    }
+  
+}
