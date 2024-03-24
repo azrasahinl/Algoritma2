@@ -1,0 +1,26 @@
+
+package algoritma2;
+
+import java.util.Scanner;
+
+public class Except_1 {
+    public static void main(String[] args) {
+ //I/O exceptions giriş/çıkış hatası
+ //mesela sayı istenirken harf girmek
+ //bu tür hataları gidermek için ise trycatch kullanılır
+ int a,b;
+ Scanner k=new Scanner(System.in);
+ 
+ try{ 
+     a=k.nextInt();
+     b=k.nextInt();
+     System.out.println(a+b);
+ }catch(Exception e){
+     System.out.println(e.getMessage());//null dedi
+     System.out.println(e);// hatayı söylüyor
+ }
+ 
+        
+    }
+    
+}
