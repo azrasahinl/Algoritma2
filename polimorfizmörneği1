@@ -1,0 +1,28 @@
+
+package algoritma2;
+class esya{
+    public void degerli(){
+        System.out.println("esyalar degerlidir");
+    }
+}
+class TV extends esya{
+    public void ekran(){
+        System.out.println("Tv ekrana sahiptir");
+    }
+}
+
+public class polimorfizmornek1 {
+    public static void main(String[] args) {
+        esya masa=new esya();
+        masa.degerli();
+        TV lg=new TV(); lg.degerli(); lg.ekran();
+        esya samsung=new TV();//POLİMORFİZM 
+//sol tarafta kalıtım veren sağ tarafta kalıtım alan olmalı
+        samsung.degerli();
+//tvden somutlaştırmamıza rağmen 
+        //esya özelliğine sahip
+        
+        
+    }
+  
+}
