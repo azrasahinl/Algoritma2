@@ -1,0 +1,22 @@
+
+package algoritma2;
+class ARABA{
+    String renk;
+    int modelyili;
+    public ARABA(){//parametresiz constructor
+      //  System.out.println("Araba olusturucusu icindeyiz");
+    }
+    public ARABA(String color,int year){//parametreli
+        renk=color; modelyili=year;
+    }
+}
+public class nesuygCONSTRUCTOR2 {
+    public static void main(String[] args) {
+      ARABA reno=new ARABA("beyaz",1992); 
+        System.out.println(reno.modelyili+" "+reno.renk);
+        ARABA x=new ARABA();
+    }
+  
+}
+//BİR PARAMETRELİ CONSTRUCTOR YAZARSAK EĞER PARAMETRESİZ BİR CONSTRUCTOR
+//DA YAZMAK ZORUNDAYIZ.
