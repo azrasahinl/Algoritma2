@@ -1,0 +1,33 @@
+
+package algoritma2;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+import java.util.Scanner;
+
+public class dosyayazmaislemi9 {
+    public static void main(String[] args) throws IOException  {
+//Klavyeden girilen sayılar içide tek olanları 
+//tek.dat dosyasına çift olanları da çift.dat dosyasına yazan
+//ve girilen sayı adeti de 5 olan programı yazınız
+   File f1=new File("c://dosyalar//tek.dat");
+   File f2=new File("c://dosyalar//çift.dat");
+  
+   FileWriter p1=new FileWriter(f1);
+   FileWriter p2=new FileWriter(f2);
+   Scanner k=new Scanner(System.in);
+   int t;
+   for (int i = 0; i < 5; i++) {
+     t=k.nextInt();
+    if(t==0) ;// sıfır gelirse bir iş yapma
+    else if(t%2==1) p1.write(t+" ");//tekler için
+    else p2.write(t+" ");//ciftler için 
+        }
+   p1.close();
+   p2.close();
+    }
+   
+}
