@@ -1,0 +1,21 @@
+ 
+package algoritma2;
+class ARABA{
+    String renk;
+    int modelyili;
+    public ARABA(){//CONSTRUCTOR
+        System.out.println("Araba olusturucusu içindeyiz");   
+    renk="siyah";
+    modelyili=2022;
+    }
+}
+public class nesuygCONSTRUCTOR1 {
+ //constructor classla aynı isme sahip metod
+ //başlangıç değeri ayarlamaları işlemleri gibi yapılarda kullanılır
+public static void main(String[] args) {
+ ARABA bmw=new ARABA(); //SOMUTLAŞTIRMADIR   
+    System.out.println(bmw.modelyili);
+    System.out.println(bmw.renk);
+    }
+    
+}
