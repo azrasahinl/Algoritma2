@@ -1,0 +1,16 @@
+
+package algoritma2;
+public class trycatchornek3 {
+    public static void main(String[] args) {
+        try{
+            String a="Bilgisayar mühendisliğ";
+            System.out.println(a.charAt(25));
+            System.out.println("selam");
+        }
+        catch(StringIndexOutOfBoundsException e){
+            System.out.println("String boyutu asildi");
+            
+        }
+    }
+    
+}
