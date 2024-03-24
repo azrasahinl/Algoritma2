@@ -1,0 +1,25 @@
+//sınıf classı içinde constructor kullanması suretiyle ogrenci
+//sayısı,dersin adı,hocanın adı  set edilecektir.
+//bu class içinde dersanlat() metodu yazılacak ve bu metod kendi içinde
+//sınıfta hoca olup olmadığını da kontrol edecektir.
+//bu yapıyı oluşturunuz.
+package algoritma2;
+class sınıf{
+ private int ogrencisayisi;
+ private String dersinadi,hocaadi;
+ public sınıf(int sayi,String ders,String hoca ){
+     ogrencisayisi=sayi;
+     dersinadi=ders;
+     hocaadi=hoca;}
+ public void dersanlat(){
+ if (hocaadi!=null) System.out.println("hoca sinif icindedir"); 
+ else System.out.println("hoca sinifa gelmemistir");
+ }
+}
+public class sınavhazırlıkornek3 {
+    public static void main(String[] args) {
+   sınıf bd4=new sınıf(70,"Algoritma ve programlama 2",null);
+   bd4.dersanlat();
+    }
+  
+}
