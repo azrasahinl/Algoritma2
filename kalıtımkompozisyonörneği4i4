@@ -1,0 +1,26 @@
+
+package algoritma2;
+class hayvan{
+    public hayvan(){
+        System.out.println("hayvan classi icindeyiz");
+    }
+}
+class evcilhayvan{
+    hayvan kedi=new hayvan();//kompozisyon
+    public evcilhayvan(){
+        System.out.println("evcil hayvan classi icindeyiz");
+    }
+}
+class vahşihayvan{
+    evcilhayvan köpek=new evcilhayvan();//kompozisyon
+    public vahşihayvan(){
+        System.out.println("vahsi hayvan classi icindeyiz");
+}
+}
+public class kalıtımkompozisyon4 {//ana classs
+ vahşihayvan aslan=new vahşihayvan();//kompoisyon   
+ public static void main(String[] args) {
+     kalıtımkompozisyon4 kangal=new kalıtımkompozisyon4();
+     
+    }
+}
