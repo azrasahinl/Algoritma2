@@ -1,0 +1,33 @@
+
+package algoritma2;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+class panelim extends JPanel{
+    public void paint(Graphics g){
+      g.setColor(Color.BLUE);
+      g.drawString("Merhaba Grafik",20, 50);
+ //Grafiğin içine yazacağımız şeyi yazdık
+ //Grafiğin sol üst köşesi (0,0) noktasıdır ordan itibvaren 20 ve 30a göre yazar
+      g.setColor(Color.red);//çizginin rengini belirliyo  
+//neyin rengini değiştirmek istiyorsak ondan önce yazcaz      
+      g.drawLine(30, 30, 50, 100);//grafikte çizgi çiziyo
+    
+    }
+}
+public class grafikornegi2 extends JFrame{
+    public grafikornegi2(){
+        add(new panelim());
+    }
+    public static void main(String[] args) {
+grafikornegi2 form=new grafikornegi2();
+ form.setSize(500,400);//boyutunu gösteriyor
+form.setLocationRelativeTo(null);//tam ekranın ortasında olmasını söylicek
+//mesela 0,0 yazsam tam bilgisayarın sol köşesinde açar
+form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//çarpıya basınca formu kapatacak
+form.setVisible(true);//true diyorum ki ekran görünsün
+    }
+}
