@@ -1,0 +1,28 @@
+
+package algoritma2;
+//POLİMORFİZMİN İKİNCİ HALİ ABSTRACT METODLAR
+abstract class memur{//SOYUT SINIFLARDIR
+    //new ifadesiyle türetilemez
+ public abstract void mesai();//en az bir tane spyut metod yazilmalidir
+ public void calisir(){//somut metod çümkü bunun gövdesi var 
+     System.out.println("memur calisir.");
+ }
+}
+class sef extends memur{
+   public void mesai(){//burayı classın içine yazmayınca hata veriyor
+  //yazmak zorunda kaldık çünkü mesai soyuttu burada onu somutlaştırdık.
+       System.out.println("memur mesaiye tabiidir.");
+   } 
+}
+public class polimorfizmornek3 {
+    public static void main(String[] args) {
+      sef ali=new sef();
+      ali.calisir(); ali.mesai();
+      memur ayse=new sef();
+      ayse.calisir(); ayse.mesai();
+ //bu kez her ikisine de eriştik yukarıda soyut olan mesai
+ //aşağıda somutlaştığı için ikisini de yazabildik
+ //nir önceki örnekte sadece kalıtım aldığımızı yazabilmiştik.
+    }
+ 
+}
