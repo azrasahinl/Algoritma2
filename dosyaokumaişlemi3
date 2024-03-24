@@ -1,0 +1,33 @@
+
+package algoritma2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class dosyaokumaislemi3 {
+ //ali.txt dosyasında sayılar ve stringler bulunmaktadır
+ //bu dosya içindeki ssayıları sayı.dat,stringleri karakter.dat dosyasına
+//yazan programı yapalım    
+    public static void main(String[] args) throws FileNotFoundException {
+ File f=new File("ali.txt");
+ Scanner fk=new Scanner(f);
+ File f1=new File("sayi.dat");
+File f2=new File("karakter.dat");
+PrintWriter p1=new PrintWriter(f1);
+PrintWriter p2=new PrintWriter(f2);
+
+String s2="";
+while(fk.hasNext()){
+    s2=fk.nextLine();
+    if(s2.charAt(0)>='0' && s2.charAt(0)<='9')
+ p1.println(s2);
+    else p2.println(s2);
+        }
+p1.close();
+p2.close();
+fk.close();
+    }
+  
+}
