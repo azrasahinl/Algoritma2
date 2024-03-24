@@ -1,0 +1,24 @@
+//yılın ayları (interface içine yazılacaktır)kullanılacaktır.
+//1.ayda kar küreme işi yapılacaktır
+//6.ayda okul karnesi alınacaktır.9.ayda okullar başlayacaktır
+//bu işlemleri gerçekleştiren oop yapınız.
+package algoritma2;
+interface aylar{
+    String ay1="Ocak",ay6="Haziran",ay9="Eylul";
+public void karkureme();//soyut metod
+public void okulkarnesialma();//soyut metod
+public void okulbaslar();//soyut metod
+}
+class sene implements aylar{
+    public void karkureme(){System.out.println("1.ayda kar kurenir");}
+    public void okulkarnesialma(){System.out.println("6.ayda karne alinir");}
+    public void okulbaslar(){System.out.println("9.ayda okul baslar");}
+    }
+public class sınavhazırlıkornek5 {
+     public static void main(String[] args) {
+    sene ikibin23=new sene();
+ikibin23.okulbaslar();
+         System.out.println(aylar.ay1);
+    }
+   
+}
