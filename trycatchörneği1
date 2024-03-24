@@ -1,0 +1,25 @@
+
+package algoritma2;
+
+import java.util.Scanner;
+
+public class trycatchornegi {
+    public static void main(String[] args){
+ //try cathch uygulaması
+ Scanner k=new Scanner(System.in);
+ int a,b;
+        System.out.println("Lütfen iki adet sayi giriniz");
+ try{
+ a=k.nextInt();
+ b=k.nextInt();
+  System.out.println(a+b);
+ }
+ catch(Exception e){
+     System.out.println("Lutfen dogru sekilde datayi giriniz");
+     System.out.println("Siz"+e+"üründe bir exception aldiniz.");
+ }
+   //mesela burda sayı değilde harf girersek
+//uyarı verir ve kullanıcı sayı değil harf girdi der bu yüzden try catch
+//kullanarak bunu kontrol edeceğiz
+    }     
+}
