@@ -1,0 +1,27 @@
+
+package algoritma2;
+class kedi{
+  public void mırlar(){//burası private olsaydı kalıtım dahi olsa
+//sibirya.mırlar diyemezdik.      
+      System.out.println("kedi mirlarr");
+  }  
+}
+class kaplan extends kedi{//kalıtımdır kaplan kediden kalıtım almıştır
+  public void kükrer(){
+      System.out.println("kaplan kukrerr");
+  }  
+  public kaplan(){
+      System.out.println("kaplan constructoru");
+  }
+}
+public class kalıtımkompozisyon5 {//ana class
+    public static void main(String[] args) {
+    kedi miyav=new kedi();
+    miyav.mırlar();
+    kaplan sibirya=new kaplan();
+    sibirya.kükrer();
+    sibirya.mırlar();
+    //sibirya.mırlar();//hem mırlar hem kükrer metodunu çağırabiliyoruz
+//çünkü kaplan kediden kalıtım almıştır    
+    }
+}
