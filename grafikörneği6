@@ -1,0 +1,29 @@
+
+package algoritma2;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class panel extends JPanel{
+public void paint(Graphics g){
+    g.drawRect(60,60,80,80);
+    g.drawRect(30,90,80,80);
+    g.drawLine(140, 60, 110, 90);
+    g.drawLine(60, 60, 30, 90);
+    g.drawLine(140, 140, 110, 170);
+    g.drawLine(60, 140, 30, 170);
+}
+}
+public class grafikornegi6 extends JFrame{
+       public grafikornegi6() {
+            add(new panelim());
+        }
+
+        public static void main(String[] args) {
+            grafikornegi7 form = new grafikornegi7();
+            form.setSize(400, 400);
+            form.setLocationRelativeTo(null);
+            form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            form.setVisible(true);
+        }
+}
