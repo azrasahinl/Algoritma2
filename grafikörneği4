@@ -1,0 +1,40 @@
+
+package algoritma2;
+
+//DİKDÖRTGEN ÇİZİMİ
+
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class panelim extends JPanel{
+    public void paint(Graphics g){
+      g.setColor(Color.BLUE);
+      g.drawString("MERHABA DÜNYA!",20, 50);
+ //Grafiğin içine yazacağımız şeyi yazdık
+ //Grafiğin sol üst köşesi (0,0) noktasıdır ordan itibvaren 20 ve 30a göre yazar
+      g.setColor(Color.red);//çizginin rengini belirliyo  
+//neyin rengini değiştirmek istiyorsak ondan önce yazcaz      
+      g.drawLine(10, 10, 150,10);//grafikte çizgi çiziyo
+      g.drawLine(10, 10, 10, 80);
+      g.drawLine(10, 80, 150, 80);
+      g.drawLine(150, 10, 150, 80);
+    }
+}
+public class grafikornegi3 extends JFrame{
+  public grafikornegi3(){
+        add(new panelim());}
+         public static void main(String[] args) {
+grafikornegi3 form=new grafikornegi3();
+ form.setSize(500,400);//boyutunu gösteriyor
+form.setLocationRelativeTo(null);//tam ekranın ortasında olmasını söylicek
+//mesela 0,0 yazsam tam bilgisayarın sol köşesinde açar
+form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//çarpıya basınca formu kapatacak
+form.setVisible(true);//true diyorum ki ekran görünsün
+    }
+    
+   
+    
+}
