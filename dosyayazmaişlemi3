@@ -1,0 +1,22 @@
+
+package algoritma2;
+
+import java.io.File;
+import java.io.IOException;
+
+public class dosyayazmaislemi2 {
+    public static void main(String[] args) throws IOException {
+        File dosya=new File("D:\\deneme.txt");
+       try{
+            if(!dosya.exists())
+            dosya.createNewFile();
+            System.out.println("Dosya olustu");
+            
+       }
+       catch(Exception e){
+           System.out.println("Istisna olustu"+e);
+           
+       }
+    }
+  
+}
