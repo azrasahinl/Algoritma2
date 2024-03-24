@@ -4,7 +4,7 @@ package algoritma2;
 import java.io.File;
 import java.io.IOException;
 
-public class dosyayazmaislemi2 {
+public class dosyayazmaislemi3 {
     public static void main(String[] args) throws IOException {
         File dosya=new File("D:\\deneme.txt");
        try{
