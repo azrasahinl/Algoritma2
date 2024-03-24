@@ -1,0 +1,63 @@
+package algoritma2;
+
+public class BKI {
+    //boyumuzu kilomuzu girip boy kilo indeksine göre zayıf normal obez diye,
+    //uyarı veren programı yazınız.
+
+    private String isim;
+    private int yas;
+    private double kilo;
+    private double boy;
+    public static final double kpp = 0.453559237;
+    public static final double mpi = 0.0254;
+
+    public BKI(String isim, int yas, double kilo, double boy) {
+        this.isim = isim;
+        this.yas = yas;
+        this.kilo = kilo;
+        this.boy = boy;
+    }
+    public BKI(String isim,double kilo,double boy){
+     this(isim,20,kilo,boy);   
+    }
+    public BKI(){
+        
+    }
+    public double getBKI(){
+        double bki=kilo*kpp/((boy*mpi)*(boy*mpi));
+    return Math.round(bki*100)/100.0;
+    
+    }
+    public String GetDurum(){
+        double bki=getBKI();
+        if(bki<18.5){
+            return "zayif";}
+        else if(bki<25){
+            return "normal";
+        }
+        else if(bki<30){
+            return "kilolu";
+        }
+        else { return "obez";}
+    
+    }
+     public String getisim(){
+         return isim;
+     } 
+     public int getyas(){
+         return yas;
+     }
+     public double getkilo(){
+         return kilo;
+     }
+     public double getboy(){
+         return boy;
+     }
+        public static void main(String[] args) {
+        BKI bki1=new BKI("Ali Demir",28,87,190);
+        System.out.println(bki1.getisim()+" "+bki1.getBKI()+" "+bki1.GetDurum()); 
+    }
+  
+}
+      
+
