@@ -22,8 +22,8 @@ class panelim extends JPanel{
       g.drawLine(150, 10, 150, 80);
     }
 }
-public class grafikornegi3 extends JFrame{
-  public grafikornegi3(){
+public class grafikornegi4 extends JFrame{
+  public grafikornegi4(){
         add(new panelim());}
          public static void main(String[] args) {
 grafikornegi3 form=new grafikornegi3();
