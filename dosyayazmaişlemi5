@@ -1,0 +1,29 @@
+
+package algoritma2;
+import java.io.*;
+import java.util.Scanner;
+public class dosyayazmaislemi8 {
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+//Klavyeden girilen ifadeler içinde sayı olanları sayı.dat.
+//karakter olanları karakter.dat dosyasına yazan program
+//Toplam 5 adet ifade girilecektir
+File fl=new File("c://dosyalar//KARAKTER.DAT");
+File fw=new File("c://dosyalar//SAYI.DAT");
+
+PrintWriter pr=new PrintWriter(fl);
+PrintWriter pw=new PrintWriter(fw);
+
+Scanner k=new Scanner(System.in);
+char c;
+ for (int i = 0; i < 5; i++) {
+ c=k.nextLine().charAt(0);
+ if(c>='0' && c<='9') pw.write(c+" ");
+ else pr.write(c+" ");
+ }
+pr.close();
+pw.close();
+
+
+    }
+   
+}
